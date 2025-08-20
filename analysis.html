@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间分析器 - 分析</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="text-center my-4">
+            <h1 class="app-title">时间分析</h1>
+        </header>
+
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span>日期选择</span>
+                        <div>
+                            <button id="prev-day" class="btn btn-sm btn-outline-secondary">
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+                            <span id="selected-date" class="mx-2"></span>
+                            <button id="next-day" class="btn btn-sm btn-outline-secondary">
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="alert alert-info" id="no-records-message" style="display: none;">
+                    暂无数据。请在主页记录活动后再查看。
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <span>24小时活动分布</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="time-distribution-container">
+                            <canvas id="time-distribution-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <span>活动统计</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="activity-stats-container">
+                            <canvas id="activity-stats-chart"></canvas>
+                        </div>
+                        <div class="activity-summary mt-3" id="activity-summary">
+                            <!-- 活动统计摘要将通过JavaScript动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <span>时间记录</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="time-records" id="time-records">
+                            <!-- 时间记录将通过JavaScript动态生成 -->
+                            <div class="text-center text-muted" id="no-records-message">
+                                暂无记录
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="fixed-bottom bg-light py-2">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-6">
+                        <a href="index.html" class="nav-link">
+                            <i class="bi bi-clock"></i>
+                            <div>主页</div>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="analysis.html" class="nav-link active">
+                            <i class="bi bi-bar-chart"></i>
+                            <div>分析页面</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/analysis.js"></script>
+</body>
+</html>

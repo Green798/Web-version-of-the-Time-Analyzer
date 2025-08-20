@@ -1,0 +1,195 @@
+/* 全局样式 */
+body {
+    font-family: 'Microsoft YaHei', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-bottom: 70px; /* 为底部导航栏留出空间 */
+}
+
+.app-title {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* 时钟样式 */
+.clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.clock {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: 8px solid #dc3545;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.clock-face {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.clock-hour, .clock-minute, .clock-second {
+    position: absolute;
+    background-color: #333;
+    transform-origin: bottom center;
+    top: 0;
+    left: 50%;
+    border-radius: 10px;
+}
+
+.clock-hour {
+    width: 6px;
+    height: 60px;
+    margin-left: -3px;
+    margin-top: 40px;
+}
+
+.clock-minute {
+    width: 4px;
+    height: 80px;
+    margin-left: -2px;
+    margin-top: 20px;
+}
+
+.clock-second {
+    width: 2px;
+    height: 90px;
+    margin-left: -1px;
+    margin-top: 10px;
+    background-color: #dc3545;
+}
+
+.clock-center {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #dc3545;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 活动按钮样式 */
+.activity-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.activity-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.activity-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-btn.active {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5) inset;
+}
+
+/* 记录控制样式 */
+#record-status {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#start-btn, #end-btn {
+    width: 120px;
+}
+
+/* 分析页面样式 */
+.time-distribution-container, .activity-stats-container {
+    height: 300px;
+    position: relative;
+}
+
+.activity-summary {
+    margin-top: 20px;
+}
+
+.activity-summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.activity-color-indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+/* 时间记录列表样式 */
+.time-record-item {
+    padding: 12px;
+    border-left: 4px solid #ccc;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 0 4px 4px 0;
+}
+
+.time-record-time {
+    font-weight: bold;
+}
+
+.time-record-duration {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 底部导航栏样式 */
+.nav-link {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    color: #dc3545;
+}
+
+.nav-link i {
+    font-size: 1.5rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 576px) {
+    .clock {
+        width: 150px;
+        height: 150px;
+        border-width: 6px;
+    }
+    
+    .clock-hour {
+        height: 45px;
+        margin-top: 30px;
+    }
+    
+    .clock-minute {
+        height: 60px;
+        margin-top: 15px;
+    }
+    
+    .clock-second {
+        height: 70px;
+        margin-top: 5px;
+    }
+}
