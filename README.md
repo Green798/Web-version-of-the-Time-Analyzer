@@ -11,7 +11,8 @@
 - **历史查询**：查看历史日期的时间记录
 
 ## 使用方法
-
+## 快速试用
+https://green798.github.io/Web-version-of-the-Time-Analyzer/index.html
 ### 主页
 
 1. 选择当前正在进行的活动
